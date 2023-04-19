@@ -22,12 +22,12 @@ function About() {
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
               point of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters, as opposed to using 'Content here,
+              distribution of letters, as opposed to using Content here,
             </p>
             <p className=" text-white-main xl:text-left text-center whitespace-normal font-comfortaa text-[16px] md:text-[26px] font-normal mt-4">
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form, by
-              injected humour, or randomised words which don't look even
+              injected humour, or randomised words which dont look even
               slightly believable. If you are going to use a passage of Lorem
               Ipsum.
             </p>
