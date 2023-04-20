@@ -1,7 +1,9 @@
 import React from "react";
 import ComponentWrapper from "../shared/ComponentWrapper/ComponentWrapper";
 import Image from "next/image";
+// ==> animations
 import { Fade } from "react-awesome-reveal";
+
 
 function RoadMap() {
   return (
@@ -72,9 +74,7 @@ function RoadMap() {
           {RoadMapData.map((road, index) => {
             return (
               <Fade key={index} direction="up" triggerOnce>
-                <div
-                  className="w-full h-full flex flex-col justify-start items-center rounded-bl-[30px] rounded-tr-[30px] border-[2px] border-white-main mt-10 bg-black-main pt-4"
-                >
+                <div className="w-full h-full flex flex-col justify-start items-center rounded-bl-[30px] rounded-tr-[30px] border-[2px] border-white-main mt-10 bg-black-main pt-4">
                   <p className="w-full text-center capitalize text-[26px] md:text-[50px] font-carter font-semibold text-white-main italic">
                     {road.phase}
                   </p>
