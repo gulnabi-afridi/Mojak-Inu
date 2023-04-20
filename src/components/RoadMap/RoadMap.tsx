@@ -71,9 +71,8 @@ function RoadMap() {
         <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-8 mb-14">
           {RoadMapData.map((road, index) => {
             return (
-              <Fade direction="up" triggerOnce>
+              <Fade key={index} direction="up" triggerOnce>
                 <div
-                  key={index}
                   className="w-full h-full flex flex-col justify-start items-center rounded-bl-[30px] rounded-tr-[30px] border-[2px] border-white-main mt-10 bg-black-main pt-4"
                 >
                   <p className="w-full text-center capitalize text-[26px] md:text-[50px] font-carter font-semibold text-white-main italic">

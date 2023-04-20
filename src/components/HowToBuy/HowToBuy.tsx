@@ -18,9 +18,8 @@ function HowToBuy() {
         {[
           HowToBuyData.map((item, index) => {
             return (
-              <Fade direction="down" delay={300} triggerOnce>
+                  <Fade key={index} direction="down" delay={300} triggerOnce>
                 <div
-                  key={index}
                   className="w-full grid grid-cols-1 lg:grid-cols-[0.4fr,1.2fr] lg:gap-0 gap-6 shadow-xl rounded-bl-[30px] rounded-tr-[30px] bg-black-main border-[2px] border-white-main p-8 justify-center items-center mt-4 lg:mt-8"
                 >
                   {/* ===> image */}

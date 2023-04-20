@@ -37,9 +37,8 @@ function Contact() {
         <div className="w-full flex flex-wrap justify-center items-center gap-4 md:gap-8">
           {ContactSocial.map((soci, index) => {
             return (
-              <Bounce triggerOnce>
+              <Bounce triggerOnce key={index}>
                 <Link
-                  key={index}
                   href={soci.path}
                   className="w-[50px] md:w-[80px] h-[50px] md:h-[80px] bg-black-main flex justify-center items-center rounded-full hover:scale-110 transition-transform duration-300"
                 >
