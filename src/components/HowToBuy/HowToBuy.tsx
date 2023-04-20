@@ -1,43 +1,51 @@
 import React from "react";
 import ComponentWrapper from "../shared/ComponentWrapper/ComponentWrapper";
 import Image from "next/image";
+import { Fade } from "react-awesome-reveal";
 
 function HowToBuy() {
   return (
     <ComponentWrapper style="py-8">
-      <div id="howToBuy" className="w-full min-h-screen flex flex-col justify-center items-center">
-        <p className="capitalize text-[30px] md:text-[56px] font-carter font-semibold text-white-main italic">
-          how to buy
-        </p>
+      <div
+        id="howToBuy"
+        className="w-full min-h-screen flex flex-col justify-center items-center overflow-x-hidden"
+      >
+        <Fade direction="down" triggerOnce>
+          <p className="capitalize text-[30px] md:text-[56px] font-carter font-semibold text-white-main italic">
+            how to buy
+          </p>
+        </Fade>
         {[
           HowToBuyData.map((item, index) => {
             return (
-              <div
-                key={index}
-                className="w-full grid grid-cols-1 lg:grid-cols-[0.4fr,1.2fr] lg:gap-0 gap-6 shadow-xl rounded-bl-[30px] rounded-tr-[30px] bg-black-main border-[2px] border-white-main p-8 justify-center items-center mt-4 lg:mt-8"
-              >
-                {/* ===> image */}
-                <div className="w-full flex justify-center items-center">
-                  <div
-                    className={`w-full ${
-                      item.name === "Switch ETH for $PEPE"
-                        ? "max-w-[360px] w-full lg:max-w-unset"
-                        : "max-w-[160px]"
-                    }  h-[160px] relative`}
-                  >
-                    <Image src={item.image} alt="" fill />
+              <Fade direction="down" delay={300} triggerOnce>
+                <div
+                  key={index}
+                  className="w-full grid grid-cols-1 lg:grid-cols-[0.4fr,1.2fr] lg:gap-0 gap-6 shadow-xl rounded-bl-[30px] rounded-tr-[30px] bg-black-main border-[2px] border-white-main p-8 justify-center items-center mt-4 lg:mt-8"
+                >
+                  {/* ===> image */}
+                  <div className="w-full flex justify-center items-center">
+                    <div
+                      className={`w-full ${
+                        item.name === "Switch ETH for $PEPE"
+                          ? "max-w-[360px] w-full lg:max-w-unset"
+                          : "max-w-[160px]"
+                      }  h-[160px] relative`}
+                    >
+                      <Image src={item.image} alt="" fill />
+                    </div>
+                  </div>
+                  {/* ===> text */}
+                  <div className="w-full flex flex-col gap-2 justify-center items-center lg:items-start">
+                    <p className="capitalize text-[30px] md:text-[50px] text-center font-carter font-semibold text-white-main italic">
+                      {item.name}
+                    </p>
+                    <p className="text-white-main font-comfortaa text-[16px] lg:text-[22px] font-normal text-center lg:text-left">
+                      {item.dec}
+                    </p>
                   </div>
                 </div>
-                {/* ===> text */}
-                <div className="w-full flex flex-col gap-2 justify-center items-center lg:items-start">
-                  <p className="capitalize text-[30px] md:text-[50px] text-center font-carter font-semibold text-white-main italic">
-                    {item.name}
-                  </p>
-                  <p className="text-white-main font-comfortaa text-[16px] lg:text-[22px] font-normal text-center lg:text-left">
-                    {item.dec}
-                  </p>
-                </div>
-              </div>
+              </Fade>
             );
           }),
         ]}
@@ -45,7 +53,6 @@ function HowToBuy() {
     </ComponentWrapper>
   );
 }
-
 
 const HowToBuyData = [
   {
